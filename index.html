@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vanilla Studio — WoW 1.12.1 Model Viewer & Exporter</title>
+    <meta name="description" content="View, customize, and export World of Warcraft 1.12.1 (Vanilla) models. Full character equipment, animation playback, and multi-format export.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-text">Vanilla Studio</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#screenshots">Screenshots</a></li>
+                <li><a href="#download">Download</a></li>
+            </ul>
+            <a href="#download" class="nav-cta">Download Free</a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-particles" id="particles"></div>
+            <div class="hero-glow"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-splash">
+                <img src="splash.webp" alt="Vanilla Studio" width="750" height="500" loading="eager">
+            </div>
+            <p class="hero-subtitle">
+                The ultimate WoW 1.12.1 model viewer and exporter.<br>
+                Browse creatures, equip characters, play animations, and export to OBJ, glTF, or sprite sheets.
+            </p>
+            <div class="hero-actions">
+                <a href="#download" class="btn btn-primary btn-lg">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    Download Now
+                </a>
+                <a href="#features" class="btn btn-outline btn-lg">
+                    Explore Features
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-value">4</span>
+                    <span class="stat-label">Export Formats</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">1000s</span>
+                    <span class="stat-label">Models Supported</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-value">100%</span>
+                    <span class="stat-label">Free</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-hint">
+            <span>Scroll to explore</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Powerful Tools</span>
+                <h2 class="section-title">Everything You Need</h2>
+                <p class="section-desc">Browse, customize, animate, and export — all from one app.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card" data-aos>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M15 3h4a2 2 0 012 2v14a2 2 0 01-2 2h-4"/><path d="M10 17l5-5-5-5"/><path d="M15 12H3"/></svg>
+                    </div>
+                    <h3>Browse MPQ Archives</h3>
+                    <p>Explore the full WoW 1.12.1 data files. Browse creatures, items, world objects, and character models through an intuitive file tree and searchable NPC/item lists.</p>
+                </div>
+
+                <div class="feature-card" data-aos>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    </div>
+                    <h3>Full Character System</h3>
+                    <p>Equip armor, weapons, helmets, and capes on any character model. Change skin color, face, hairstyle, and facial hair. Save and load character configurations.</p>
+                </div>
+
+                <div class="feature-card" data-aos>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                    </div>
+                    <h3>Animation Playback</h3>
+                    <p>Play any animation on any model — walk, run, attack, cast, dance, and hundreds more. Control playback speed and scrub through frames.</p>
+                </div>
+
+                <div class="feature-card" data-aos>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                    </div>
+                    <h3>Sprite Strip Export</h3>
+                    <p>Render animations as transparent PNG sprite strips — perfect for 2D games, pixel art pipelines, or sprite-based engines. Choose from 8-way isometric camera presets.</p>
+                </div>
+
+                <div class="feature-card" data-aos>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                    </div>
+                    <h3>Multi-Format Export</h3>
+                    <p>Export to OBJ with materials and textures, glTF 2.0 with full skeleton and skinning, or IMR binary format. Static, animated, and animation-only modes.</p>
+                </div>
+
+                <div class="feature-card" data-aos>
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                    </div>
+                    <h3>Camera Presets</h3>
+                    <p>8-way isometric, front, back, side, top, and three-quarter views. Deterministic camera positions for consistent sprite capture across all your models.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="screenshots" id="screenshots">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">See It In Action</span>
+                <h2 class="section-title">Screenshots</h2>
+                <p class="section-desc">A glimpse at Vanilla Studio's interface and capabilities.</p>
+            </div>
+
+            <div class="screenshot-gallery">
+                <div class="screenshot-card">
+                    <img src="model_browser.webp" alt="Vanilla Studio model browser and 3D viewport" loading="lazy">
+                    <p class="screenshot-caption">Model Browser &amp; 3D Viewport</p>
+                </div>
+                <div class="screenshot-card">
+                    <img src="equipment.webp" alt="Character equipment and customization in Vanilla Studio" loading="lazy">
+                    <p class="screenshot-caption">Character Equipment &amp; Customization</p>
+                </div>
+                <div class="screenshot-card">
+                    <img src="animation_export.webp" alt="Animation playback and export in Vanilla Studio" loading="lazy">
+                    <p class="screenshot-caption">Animation Playback &amp; Export</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="formats">
+        <div class="container">
+            <div class="formats-content">
+                <div class="formats-text">
+                    <span class="section-tag">Export Anywhere</span>
+                    <h2 class="section-title">Your Models,<br>Your Format</h2>
+                    <p>Whether you're making a 2D game, importing into Blender, or building a 3D project — Vanilla Studio exports exactly what you need.</p>
+                </div>
+                <div class="formats-grid">
+                    <div class="format-item">
+                        <div class="format-ext">.OBJ</div>
+                        <div class="format-name">Wavefront OBJ</div>
+                        <div class="format-desc">Mesh + materials + textures. Universal compatibility.</div>
+                    </div>
+                    <div class="format-item">
+                        <div class="format-ext">.glTF</div>
+                        <div class="format-name">glTF 2.0</div>
+                        <div class="format-desc">Skinned mesh, skeleton, and animations. Industry standard.</div>
+                    </div>
+                    <div class="format-item">
+                        <div class="format-ext">.PNG</div>
+                        <div class="format-name">Sprite Strips</div>
+                        <div class="format-desc">Transparent animation strips. Perfect for 2D games.</div>
+                    </div>
+                    <div class="format-item">
+                        <div class="format-ext">.IMR</div>
+                        <div class="format-name">IMR Binary</div>
+                        <div class="format-desc">Compact binary with embedded textures. Lightning fast.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="download" id="download">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get Started</span>
+                <h2 class="section-title">Download Vanilla Studio</h2>
+                <p class="section-desc">Completely free. No accounts, no subscriptions, no limits.</p>
+            </div>
+
+            <div class="download-grid">
+                <div class="download-card">
+                    <div class="download-os-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
+                    </div>
+                    <h3>Windows</h3>
+                    <p class="download-version">x86_64</p>
+                    <a href="VanillaStudio-Windows.zip" class="btn btn-primary download-btn">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download
+                    </a>
+                    <span class="download-size">.zip</span>
+                </div>
+
+                <div class="download-card">
+                    <div class="download-os-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.832-.41 1.684-.287 2.489a.424.424 0 00-.11.135c-.26.268-.45.6-.663.839-.073.076-.263.26-.275.312-.222.93.078 1.854.794 2.403.344.263.745.423 1.158.46.933.085 1.313-.298 1.964-.562.29-.116.572-.224.89-.285.318-.06.66-.063.997-.054l.02.002c.333-.01.668-.008.98.046.318.06.6.17.89.285.651.264 1.027.648 1.953.563.418-.038.82-.198 1.167-.462.715-.55 1.016-1.474.793-2.404-.012-.052-.202-.236-.275-.312-.213-.24-.402-.571-.663-.839a.424.424 0 00-.11-.134c.126-.81-.005-1.665-.286-2.498-.585-1.77-1.824-3.464-2.71-4.516-.756-1.073-.977-1.93-1.048-3.015-.06-1.491 1.058-5.965-3.17-6.298-.165-.014-.325-.021-.48-.021zm-.005 1.025c.1 0 .194.006.282.015 2.104.166 1.676 3.038 1.742 4.527.077 1.266.343 2.317 1.209 3.546.875 1.035 2.085 2.68 2.622 4.306.262.792.378 1.588.234 2.274a.42.42 0 00.075.36c.08.096.178.2.263.305.187.234.383.505.523.65.12.123.2.302.223.5.063.53-.156 1.029-.543 1.326a1.336 1.336 0 01-.774.308c-.545.05-.908-.173-1.583-.446-.288-.116-.618-.244-.98-.31a5.314 5.314 0 00-1.1-.053 5.263 5.263 0 00-1.093.053c-.37.068-.705.2-.997.318-.665.27-1.024.49-1.57.44a1.336 1.336 0 01-.774-.31c-.387-.296-.607-.795-.543-1.325.023-.198.103-.377.222-.5.14-.146.337-.416.524-.65.085-.105.183-.209.264-.305a.42.42 0 00.074-.36c-.143-.682-.027-1.476.236-2.27.541-1.63 1.755-3.28 2.626-4.31.866-1.23 1.131-2.28 1.206-3.548.067-1.489-.362-4.36 1.742-4.527a2.87 2.87 0 01.282-.015z"/></svg>
+                    </div>
+                    <h3>Linux</h3>
+                    <p class="download-version">x86_64</p>
+                    <a href="VanillaStudio-Linux.zip" class="btn btn-primary download-btn">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download
+                    </a>
+                    <span class="download-size">.zip</span>
+                </div>
+
+                <div class="download-card">
+                    <div class="download-os-icon">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                    </div>
+                    <h3>macOS</h3>
+                    <p class="download-version">Universal (Intel + Apple Silicon)</p>
+                    <a href="VanillaStudio-macOS.zip" class="btn btn-primary download-btn">
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                        Download
+                    </a>
+                    <span class="download-size">.zip</span>
+                </div>
+            </div>
+
+            <div class="download-note">
+                <p><strong>Requirements:</strong> OpenGL 3.3+ capable GPU. WoW 1.12.1 client data files required for model browsing.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo-text">Vanilla Studio</span>
+                </div>
+                <p class="footer-disclaimer">
+                    Vanilla Studio is a fan-made tool and is not affiliated with or endorsed by Blizzard Entertainment.
+                    World of Warcraft and all related assets are trademarks of Blizzard Entertainment, Inc.
+                </p>
+                <div class="footer-links">
+                    <a href="#features">Features</a>
+                    <a href="#screenshots">Screenshots</a>
+                    <a href="#download">Download</a>
+                    <a href="https://buymeacoffee.com/rednibcoding" target="_blank" rel="noopener noreferrer">☕ Buy me a coffee</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Vanilla Studio. Free to use.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <a href="https://buymeacoffee.com/rednibcoding" target="_blank" rel="noopener noreferrer" class="bmc-button" title="Buy me a coffee">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24"><path d="M20.216 6.415l-.132-.666c-.119-.598-.388-1.163-1.001-1.379-.197-.069-.42-.098-.57-.241-.152-.143-.196-.366-.231-.572-.065-.378-.125-.756-.192-1.133-.057-.325-.102-.69-.25-.987-.195-.4-.597-.634-.996-.788a5.723 5.723 0 00-.626-.194c-1-.263-2.05-.36-3.077-.416a25.834 25.834 0 00-3.7.062c-.915.083-1.88.184-2.75.5-.318.116-.646.256-.888.501-.297.302-.393.77-.177 1.146.154.267.415.456.692.58.36.162.737.284 1.123.366 1.075.238 2.189.331 3.287.37 1.218.05 2.437.01 3.65-.118.299-.033.598-.073.896-.119.352-.054.578-.513.474-.834-.124-.383-.457-.531-.834-.473-.466.074-.96.108-1.382.146-1.177.08-2.358.082-3.536.006a22.228 22.228 0 01-1.157-.107c-.086-.01-.18-.025-.258-.036-.243-.036-.484-.08-.724-.13-.111-.027-.111-.185 0-.212h.005c.277-.06.557-.108.838-.147h.002c.131-.009.263-.032.394-.048a25.076 25.076 0 013.426-.12c.674.019 1.347.067 2.017.144l.228.031c.267.04.533.088.798.145.392.085.895.113 1.07.542.055.137.08.288.111.431l.319 1.484a.237.237 0 01-.199.284h-.003c-.037.006-.075.01-.112.015a36.704 36.704 0 01-4.743.295 37.059 37.059 0 01-4.699-.304c-.14-.017-.293-.042-.417-.06-.326-.048-.649-.108-.973-.161-.393-.065-.768-.032-1.123.161-.29.16-.527.404-.675.701-.154.316-.199.66-.267 1-.069.34-.176.707-.135 1.056.087.753.613 1.365 1.37 1.502a39.69 39.69 0 0011.343.376.483.483 0 01.535.53l-.071.697-1.018 9.907c-.041.41-.047.832-.125 1.237-.122.637-.553 1.028-1.182 1.171-.577.131-1.165.185-1.76.222-.688.042-1.376.035-2.063-.024-.76-.064-1.527-.158-2.228-.452-.391-.163-.728-.415-.955-.787-.243-.38-.346-.838-.412-1.282-.066-.445-.074-.893-.125-1.339-.039-.345-.091-.689-.127-1.035-.022-.22-.061-.457.005-.672l.033-.118a.462.462 0 01.892.055c.019.065.032.131.044.198.048.275.072.553.102.83.037.345.069.691.109 1.036.065.547.105 1.107.278 1.629.166.497.51.867 1.006 1.058.608.234 1.268.32 1.916.377.764.067 1.53.073 2.293.031.62-.042 1.243-.124 1.828-.322a1.33 1.33 0 00.669-.49c.157-.23.237-.504.275-.777.047-.34.046-.686.086-1.025l1.2-11.545a.462.462 0 01.464-.418h.001a.462.462 0 01.091.009 11.35 11.35 0 001.548-.074c.726-.089 1.397-.364 1.888-.954.376-.453.555-1.033.522-1.614-.023-.405-.13-.789-.32-1.137z"/></svg>
+        <span>Buy me a coffee</span>
+    </a>
+
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-backdrop"></div>
+    </div>
+</body>
+</html>
